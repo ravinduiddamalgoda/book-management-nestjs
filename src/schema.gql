@@ -1,0 +1,64 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Book {
+  id: Int!
+  title: String!
+  author: String!
+  publishedYear: Float!
+  genre: String!
+}
+
+type AuthPayload {
+  access_token: String!
+}
+
+type User {
+  id: String!
+  username: String!
+  password: String!
+  email: String!
+  phoneNo: Float!
+}
+
+type Query {
+  books: [Book!]!
+  book(id: Int!): Book!
+  getAllUsers: [User!]!
+}
+
+type Mutation {
+  createBook(createBookInput: CreateBookInput!): Book!
+  updateBook(updateBookInput: UpdateBookInput!): Book!
+  removeBook(id: Int!): Book!
+  register(registerInput: RegisterUserInput!): User!
+  login(loginInput: LoginUserInput!): AuthPayload!
+}
+
+input CreateBookInput {
+  title: String!
+  author: String!
+  publishedYear: Float!
+  genre: String!
+}
+
+input UpdateBookInput {
+  title: String
+  author: String
+  publishedYear: Float
+  genre: String
+  id: Float!
+}
+
+input RegisterUserInput {
+  username: String!
+  password: String!
+  email: String!
+  phoneNo: Float!
+}
+
+input LoginUserInput {
+  username: String!
+  password: String!
+}
