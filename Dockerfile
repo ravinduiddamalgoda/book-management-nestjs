@@ -6,7 +6,6 @@ WORKDIR /usr/src/app
 
 # Copy the package.json and yarn.lock files
 COPY package*.json ./
-COPY yarn.lock ./
 
 # Install global NestJS CLI if needed
 RUN npm install -g @nestjs/cli
